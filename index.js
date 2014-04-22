@@ -3,7 +3,7 @@ var Handlebars = require('handlebars');
 
 function BakedHBSFilter (inputTree, context, options) {
   if (!(this instanceof BakedHBSFilter)) {
-    return new BakedHBSFilter(inputTree, options);
+    return new BakedHBSFilter(inputTree, context, options);
   }
   Filter.call(this, inputTree, options);
   this.options = options || {};
@@ -17,9 +17,7 @@ BakedHBSFilter.prototype.extensions = ['hbs', 'handlebars'];
 BakedHBSFilter.prototype.targetExtension = 'html';
 
 BakedHBSFilter.prototype.processString = function (string) {
-  var tmpl = Handlebars.compile(string);
-  var result = tmpl(this.context);
-  return result;
+  return Handlebars.compile(string)(this.context);
 };
 
 module.exports = BakedHBSFilter;
