@@ -1,4 +1,4 @@
-A Broccoli module for precompiled, static Handlebars templates.
+A Broccoli transform for compilng Handlebars templates to HTML.
 
 Example usage:
 
@@ -15,7 +15,8 @@ var index = pickFiles('public/', {
   destDir: '/'
 });
 
-index = bakedHBSFilter(index, {
+var context = {
   production: IS_PRODUCTION_ENV
-});
+};
+index = bakedHBSFilter(index, context);
 ```
