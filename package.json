@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/thomasboyt/broccoli-bake-handlebars.git"
+    "url": "git://github.com/thomasboyt/broccoli-baked-handlebars.git"
   },
   "author": "Thomas Boyt <me@thomasboyt.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/thomasboyt/broccoli-bake-handlebars/issues"
+    "url": "https://github.com/thomasboyt/broccoli-baked-handlebars/issues"
   },
-  "homepage": "https://github.com/thomasboyt/broccoli-bake-handlebars",
+  "homepage": "https://github.com/thomasboyt/broccoli-baked-handlebars",
   "dependencies": {
     "handlebars": "^2.0.0-alpha.2",
     "broccoli-filter": "^0.1.6"
