@@ -17,7 +17,7 @@ BakedHBSFilter.prototype.extensions = ['hbs', 'handlebars'];
 BakedHBSFilter.prototype.targetExtension = 'html';
 
 BakedHBSFilter.prototype.processString = function (string) {
-  return Handlebars.compile(string)(this.context);
+  return Handlebars.compile(string)(this.context, this.options);
 };
 
 module.exports = BakedHBSFilter;
